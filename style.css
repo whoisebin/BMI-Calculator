@@ -1,0 +1,57 @@
+/* Default background */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  transition: background 1.5s ease;
+}
+
+/* Colorful gradient backgrounds */
+body.underweight { background: linear-gradient(135deg, #89f7fe, #66a6ff); }
+body.healthy     { background: linear-gradient(135deg, #56ab2f, #a8e063); }
+body.overweight  { background: linear-gradient(135deg, #f7971e, #ffd200); }
+body.obese       { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
+
+.container {
+  width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  background: #eee;
+  height: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#progress {
+  height: 100%;
+  width: 0;
+  transition: width 1.5s ease, background 1s ease;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #fff; }
+  50% { box-shadow: 0 0 20px #fff; }
+  100% { box-shadow: 0 0 5px #fff; }
+}
+
+/* Fade-in for advice */
+.fade-in { opacity: 0; transition: opacity 1.5s ease; }
+.fade-in.show { opacity: 1; }
